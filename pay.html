@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Payment Page</title>
+  <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+  <div class="payment-container">
+    <header>
+      <h1>Medical Payment Portal</h1>
+      <p>Secure and convenient payment for your medical services.</p>
+    </header>
+
+    <form>
+      <section class="form-section">
+        <h2>Patient Information</h2>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="patient-id">Patient ID</label>
+        <input type="text" id="patient-id" name="patient-id" placeholder="Enter your patient ID" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </section>
+
+      <section class="form-section">
+        <h2>Payment Details</h2>
+        <label for="amount">Amount to Pay </label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount" min="1" required>
+      </section>
+
+      <section class="form-section">
+        <h2>Payment Method</h2>
+        <div class="payment-option">
+          <input type="radio" id="credit-card" name="payment-method" checked>
+          <label for="credit-card">Credit/Debit Card</label>
+          <div class="payment-method-section">
+            <label for="card-name">Cardholder Name</label>
+            <input type="text" id="card-name" name="card-name" placeholder="Enter cardholder name">
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" maxlength="16" placeholder="1234 5678 9012 3456">
+
+            <label for="expiry-date">Expiration Date</label>
+            <input type="month" id="expiry-date" name="expiry-date">
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="123">
+          </div>
+        </div>
+
+        <div class="payment-option">
+          <input type="radio" id="upi" name="payment-method">
+          <label for="upi">UPI</label>
+          <div class="payment-method-section">
+            <label for="upi-id">UPI ID</label>
+            <input type="text" id="upi-id" name="upi-id" placeholder="example@upi">
+          </div>
+        </div>
+
+        <div class="payment-option">
+          <input type="radio" id="paypal" name="payment-method">
+          <label for="paypal">PayPal</label>
+          <div class="payment-method-section">
+            <p>Pay with your PayPal account securely.</p>
+          </div>
+        </div>
+      </section>
+
+      <button type="submit" class="btn-submit" onclick="payment()">Submit Payment</button>
+    </form>
+
+    <div class="image-background"></div>
+
+    <footer>
+      <p>Need assistance? Call us at <a href="tel:+123456789">+1 (234) 567-89</a> or email <a href="mailto:support@medicalpayments.com">support@medicalpayments.com</a>.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
